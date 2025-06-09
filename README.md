@@ -12,5 +12,29 @@
 
 <h2><b>Destination Places</b></h2>
 
+![Alt text](https://github.com/user-attachments/assets/bc6d3206-f6af-428b-a987-c2f0ec41cdb2)
+
+<h2><b>Weather Report</b></h2>
+
+![Alt text](https://github.com/user-attachments/assets/95b5bd8f-57ab-450c-8d2b-362661e73820)
+
+<h2><b>Bus Reservation</b></h2>
+
+![Alt text](https://github.com/user-attachments/assets/b97f15a6-64c6-4ca3-b1d3-8850c52b2b7a) 
+
+<h2><b>Customer Details</b></h2>
+
+![Alt text](https://github.com/user-attachments/assets/eafc3124-96ca-465d-a461-ec0a2c01e7f7) 
+
+<h2><b>Payment Methods</b></h2>
+
+![Alt text](https://github.com/user-attachments/assets/903ef070-e598-44d4-b720-8ff1db63f9e4)
+
+<h2><b>Credit Card</b></h2>
+
+![Alt text](https://github.com/user-attachments/assets/3c840ab1-abb3-484a-afb6-e76abed82ea5) 
+
+
+
 
 
