@@ -3,4 +3,4 @@
 </p>
 
 <h2>Home page</h2>
-<img src="C:\Users\Admin\OneDrive\Pictures\Screenshots">
+![Image](https://github.com/user-attachments/assets/9892633a-4291-4d3e-864e-a45cd7efde92)
