@@ -8,3 +8,9 @@
 
 <h2><b>About Page</b></h2>
 
+![Alt text](https://github.com/user-attachments/assets/a8be4894-84cf-4455-b452-d268b2a8349f)
+
+<h2><b>Destination Places</b></h2>
+
+
+
