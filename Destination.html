@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Rotating Image Gallery 2</title>
+
+    <link rel="stylesheet" href="Destination.css">
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <style>
+        .box .btn{
+            width:100px;
+            height:100px;
+            background-color: green;
+            color: white;
+            }
+    </style>
+</head>
+<body>
+    <div class="box" id="clickableImage">
+        <span style="--i:1">
+            <img src="https://miro.medium.com/v2/resize:fit:896/1*MAbCzvck7TG98Q3ZDQ3EDg.jpeg" alt="ooty">
+            <button class="btn">Ooty</button>
+            <p>Ooty</p>
+        </span>
+        <span style="--i:2">
+            <img src="https://indiatravelite.com/imagesdestination/kodaikanal.jpg" alt="kodaikanal">
+            <button>Kodaikanal</button>
+        </span>
+        <span style="--i:3">
+            <img src="C:\Major Project\mysore.jpg" alt="mysore">
+            <button>Mysore Palace</button>
+        </span>
+        <span style="--i:4">
+            <img src="https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/coimbatore-1656092595_19e9fcebd774ab38d0a5.webp" alt="Alleppey">
+            <button>Kerala</button>
+        </span>
+        <span style="--i:5">
+            <img src="https://www.robinage.com/wp-content/uploads/2022/04/Taj-Mahal.jpg" alt="Uttar Pradesh">
+            <button>TajMahal</button>
+        </span>
+        <span style="--i:6">
+            <img src="https://discoverkullumanali.in/wp-content/uploads/2024/03/Discover-Kullu-Manali-Home-Page-banner.jpg" alt="Himachal Pradesh">
+            <button>Himachal Pradesh</button>
+        </span>
+        <span style="--i:7">
+            <img src="https://www.blumenbecker.com/fileadmin/_processed_/6/1/csm_Mumbai-Skyline_e0dbb19198.jpg" alt="Maharashtra">
+            <button>Maharashtra</button>
+        </span>
+        <span style="--i:8">
+            <img src="https://www.connectingtraveller.com/images/localtip/1630770854images%20(44).jpeg"  alt="">
+             <button>Puducherry</button>
+
+        </span>
+
+    </div>
+
+    <script>
+
+    
+            document.getElementById("clickableImage").addEventListener("click", function() {
+    window.location.href = "choose vehicle.html";
+});
+</script>
+        
+</body>
+</html>

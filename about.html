@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+<body>
+    <section>
+        <div class="content">
+            <h1>Let's Travel The World Together</h1>
+            <p>Plan your perfect journey with easy train and bus ticket booking, live weather updates, smart map integration, and seamless hotel reservations. Discover famous local food menus at every destination. Get instant help anytime with our advanced AI chatbot for a hassle-free travel experience.</p>
+         
+            <div class="form-group">
+                <div class="lable_total flex">
+                      <label class="destination"  for="price" style="color: white;">Max Price : <span id="result">2500</span> 
+                    </label>
+                </div>
+                <input id="mySlider" onclick="print()" type="range" min="0" max="10000" value="2500"  style="width: 215px;">
+                <script>
+                    mySlider.oninput = showSliderValue;
+                    function showSliderValue() {
+                        result.innerText = this.value;
+                    }
+
+                    function print(){
+                        document.getElementById("mySlider").addEventListener.innerHTML=alert("Plan your perfect getaway choose a budget that fits your travel dreams!");
+                    }
+                </script>
+            </div>
+            <a href="intro places.html"><button>Explore Tours</button></a>
+        </div>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://media.istockphoto.com/id/1083982928/photo/jaipur-metro.jpg?s=612x612&w=0&k=20&c=gLJrIg6X9XvumVlMLyZ-RUi3SZJa0Yu4O4UfWVoJc0c=">
+                    <div class="cost dark-text">Transport</div>
+                    <div class="overlay">
+                        <h1>Transport Facility </h1>
+                        <p>Easy access to transportation services for convenient travel.
+                        </p>
+                   <div class="ratings">
+                    <div class="stars">
+                        <icon></icon>
+                    </div>
+                    <span></span>
+                   </div>
+                    </div>
+                </div>
+           
+                <div class="swiper-slide">
+                    <img src="https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg">
+                    <div class="cost dark-text">Food</div>
+                    <div class="overlay">
+                        <h1>Food Facility</h1>
+                        <p>Nearby restaurants and food options to satisfy your hunger</p>
+                   <div class="ratings">
+                    <div class="stars">
+                        <icon></icon>
+                    </div>
+                    <span></span>
+                   </div>
+                    </div>
+                </div>
+           
+                <div class="swiper-slide">
+                    <img src="https://images.pexels.com/photos/18041018/pexels-photo-18041018/free-photo-of-las-vegas-illuminated-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+                    <div class="cost dark-text">Hotel</div>
+                    <div class="overlay">
+                        <h1>Hotel Facility</h1>
+                        <p>Comfortable accommodations for a pleasant stay </p>
+                   <div class="ratings">
+                    <div class="stars">
+                        <icon></icon>
+                    </div>
+                    <span></span>
+                   </div>
+                    </div>
+                </div>
+           
+                <div class="swiper-slide">
+                    <img src="https://www.mapsofindia.com/images2/india-map-2019.jpg">
+                    <div class="cost dark-text">Location</div>
+                    <div class="overlay">
+                        <h1>Interactive map</h1>
+                        <p>Locate service centers and nearby facilities with precision </p>
+                   <div class="ratings">
+                    <div class="stars">
+                        <icon></icon>
+                    </div>
+                    <span></span>
+                   </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="C:\Users\Admin\Downloads\weather.jpg">
+                    <div class="cost dark-text">Weather</div>
+                    <div class="overlay">
+                        <h1></h1>
+                        <p>Our platform provides accurate and real-time weather updates, including temperature, humidity, wind speed, and rainfall predictions</p> </p>
+                   <div class="ratings">
+                    <div class="stars">
+                        <icon></icon>
+                    </div>
+                    <span></span>
+                   </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="https://media.istockphoto.com/id/1274390150/photo/businessman-touching-digital-chat-bot-on-tablet-for-provide-access-to-information-and-data-in.jpg?s=612x612&w=0&k=20&c=IbVJnU1-uXefXg24rLs6yVlP-orQDN-nlIMYaxks3Wo=">
+                    <div class="cost dark-text">chatbot</div>
+                    <div class="overlay">
+                        <h1 style="padding-top: 10px;">chatbot</h1>
+                        <p>Get instant assistance and answers with our smart chatbot</p> </p>
+                   <div class="ratings">
+                    <div class="stars">
+                        <icon></icon>
+                    </div>
+                    <span></span>
+                   </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="C:\Users\Admin\OneDrive\Desktop\image\offer.jpg">
+                    <div class="cost dark-text">Planning Guidelines</div>
+                    <div class="overlay">
+                        <h1 style="padding-top: 10px;">Offers</h1>
+                        <p style="color:rgb(4, 4, 71); font-size: 15px; font-weight:bold;"> Book your trip in advance and enjoy up to 30% off on flights and hotels</p>
+                   <div class="ratings">
+                    <div class="stars">
+                        <icon></icon>
+                    </div>
+                    <span></span>
+                   </div>
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>

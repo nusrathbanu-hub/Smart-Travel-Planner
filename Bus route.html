@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Reservation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        /* Main Container */
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        /* Left Side - Bus Details */
+        .bus-container {
+            width: 55%;
+            margin-left: 10px;
+        
+        }
+
+        .bus-box {
+            background-color:white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            display: flex;
+            align-items: center;
+        }
+
+        .bus-box p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .location-btn {
+            background-color:rgb(5, 5, 56);
+            margin-top: 10px;
+        }
+
+        .reserve-btn {
+            background-color:green;
+            margin-top: 10px;
+        }
+
+        /* Right Side - Maps */
+        .map-container {
+            width: 40%;
+        }
+
+        .map-box {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            gap: 25px;
+        }
+
+header {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    margin-top: 10px;
+}
+
+.search-bar input, .search-bar button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    gap:15%;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header 
+    <h2>Want to change the route?</h2>-->
+
+    <header>
+        <h1>Route to Adventure Map Your Way Travel Made Easy</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Name" id="name">
+            <input type="text" placeholder="From..." id="from">
+            <input type="text" placeholder="To..." id="to">
+            <input type="date" id="date">
+            <button onclick="searchBuses()" style="font-size: 15px; width: 150px;"> Login</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Left Side: Bus Details -->
+        <div class="bus-container">
+             <!--1-->
+            <div class="bus-box">
+                <h3>🚌 Jihan Luxury Travels</h3>
+                <p><strong>🕒 11:30 PM - 4:30 AM | Erode - Bangalore</strong></p>
+                <p>🌐 Internet | 🍿 Snacks | 📺 TV | 🔋 Mobile Charging</p>
+                <p>💰 Rs. 2000 per seat | ✅ 3 seats available</p>
+                <a href="weather.html"><button class="btn location-btn">Weather</button></a>
+                <a href="common form.html"><button class="btn reserve-btn" id="reserveSeat1">Payment</button></a>
+            
+            </div>
+
+           <!--2-->
+            <div class="bus-box">
+                <h3>🚌 Kodaikanal Bus</h3>
+                <p><strong>🕒 04:30 AM - 08:30 AM | Tiruchy - Kodaikanal</strong></p>
+                <p>🌐 Internet | 🍿 Snacks | 📺 TV | 🔋 Mobile Charging</p>
+                <p>💰 Rs. 1600 per seat | ✅ 5 seats available</p>
+                <a href="weather.html"><button class="btn location-btn">Weather</button></a>
+                <a href="common form.html"><button class="btn reserve-btn" id="reserveSeat2">Payment</button></a>
+            
+            </div>
+            <!--3-->
+            <div class="bus-box">
+                <h3>KSRTC(Kerala)</h3>
+                <p><strong>  5:00 AM - 9:00 AM  |Coimbatore - kerala </strong></p>
+                <p>🌐 Internet | 🍿 Snacks | 📺 TV | 🔋 Mobile Charging</p>
+                <p>💰 Rs. 2500 per seat | ✅ 7 seats available</p>
+                <a href="weather.html"><button class="btn location-btn">Weather</button></a>
+                <a href="common form.html"><button class="btn reserve-btn" id="reserveSeat3">Payment</button></a>
+            
+            </div>
+               <!--4-->
+            <div class="bus-box">
+                <h3>SAPTAGIRI EXPRESS Bus</h3>
+                <p><strong>11:00PM - 2:00 AM | Chennai - Tirupati</strong></p>
+                <p>🌐 Internet | 🍿 Snacks | 📺 TV | 🔋 Mobile Charging</p>
+                <p>💰 Rs. 1600 per seat | ✅ 7 seats available</p>
+                <a href="weather.html"><button class="btn location-btn">Weather</button></a>
+                <a href="common form.html"><button class="btn reserve-btn" id="reserveSeat4">Payment</button></a>
+            
+            </div>
+            <!--5-->
+            <div class="bus-box">
+                <h3>🚌 KPN Travels</h3>
+                <p>🕒 10:00 PM - 05:00 PM | Chennai - Madurai</p>
+                <p>🌐 Internet | 🍿 Snacks | 📺 TV | 🔋 Mobile Charging</p>
+                <p>💰 Rs. 1400 per seat | ✅ 3 seats available</p>
+                <a href="weather.html"><button class="btn location-btn">Weather</button></a>
+                <a href="common form.html"><button class="btn reserve-btn" id="reserveSeat5">Payment</button></a>
+            </div>
+             <!--6-->
+            <div class="bus-box">
+                <h3>🚌 SRM Travels</h3>
+                <p>🕒 04:00 AM - 08:15 AM |Puducherry - Yercaud </p>
+                <p>🌐 Internet | 🍿 Snacks | 📺 TV | 🔋 Mobile Charging</p>
+                <p>💰 Rs. 1200 per seat | ✅ 8 seats available</p>
+                <a href="weather.html"><button class="btn location-btn">Weather</button></a>
+                <a href="common form.html"><button class="btn reserve-btn" id="reserveSeat6">Payment</button></a>
+            </div>
+            <!--7-->
+            <div class="bus-box">
+                <h3>🚌 Orange Travels</h3>
+                <p>🕒  11:00 PM- 06:00 AM |Theni  - Kanniyakumari</p>
+                <p>🌐 Internet | 🍿 Snacks | 📺 TV | 🔋 Mobile Charging</p>
+                <p>💰 Rs. 1500 per seat | ✅ 4 seats available</p>
+                <a href="weather.html"><button class="btn location-btn">Weather</button></a>
+                <a href="common form.html"><button class="btn reserve-btn" id="reserveSeat7">Payment</button></a>
+            </div>
+            <!--8-->
+            <div class="bus-box">
+                <h3>🚌SRS Travels</h3>
+                <p>🕒 04:00 AM - 08:30 AM | Erode - Thanjavur</p>
+                <p>🌐 Internet | 🍿 Snacks | 📺 TV | 🔋 Mobile Charging</p>
+                <p>💰 Rs. 1300 per seat | ✅ 6 seats available</p>
+                <a href="weather.html"><button class="btn location-btn">Weather</button></a>
+                <a href="common form.html"><button class="btn reserve-btn" id="reserveSeat8">Payment</button></a>
+            </div>
+            <!--9-->
+            <div class="bus-box">
+                <h3>🚌 National Travels</h3>
+                <p>🕒 06:00 PM - 06:30 AM |  Namakkal - Ooty</p>
+                <p>🌐 Internet | 🍿 Snacks | 📺 TV | 🔋 Mobile Charging</p>
+                <p>💰 Rs. 1300 per seat | ✅ 6 seats available</p>
+                <a href="weather.html"><button class="btn location-btn">Weather</button></a>
+                <a href="common form.html"><button class="btn reserve-btn" id="reserveSeat9">Payment</button></a>
+            </div>
+            <!--10-->
+            <div class="bus-box">
+                <h3>🚌Jayam Travels</h3>
+                <p>🕒 06:45 AM - 09:30 AM | Dindugal -Coonoor </p>
+                <p>🌐 Internet | 🍿 Snacks | 📺 TV | 🔋 Mobile Charging</p>
+                <p>💰 Rs. 1300 per seat | ✅ 6 seats available</p>
+                <a href="weather.html"><button class="btn location-btn">Weather</button></a>
+                <a href="common form.html"><button class="btn reserve-btn" id="reserveSeat10">Payment</button></a>
+            </div>
+           <!--11-->
+            <div class="bus-box">
+                <h3>🚌 Universal Travels</h3>
+                <p>🕒 11:00 PM - 06:15 AM |  Velankanni - Chennai </p>
+                <p>🌐 Internet | 🍿 Snacks | 📺 TV | 🔋 Mobile Charging</p>
+                <p>💰 Rs. 1300 per seat | ✅ 6 seats available</p>
+                <a href="weather.html"><button class="btn location-btn">Weather</button></a>
+                <a href="common form.html"> <button class="btn reserve-btn" id="reserveSeat11">Payment</button></a>
+            </div>
+
+
+
+
+
+        </div>
+
+        <!-- Right Side: Multiple Maps -->
+        <div class="map-container">
+            <!--0-->
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3478787.0738670174!2d75.25051421111837!3d12.913024391137169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3ba96f46762f4671%3A0xd97da6e3d9c7f75e!2serode!3m2!1d11.3410364!2d77.7171642!4m5!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sbangalore!3m2!1d12.9715987!2d77.5945627!5e0!3m2!1sen!2sin!4v1745817717584!5m2!1sen!2sin" 
+                width="400" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+            <br>
+            <!--1-->
+            <div class="map-box">
+                <!--Tiruchy-Kodaikanal-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1004079.2687562004!2d77.43878151779543!3d10.564719779225745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x3baaf50ff2aecdad%3A0x6de02c3bedbbaea6!2sTiruchirappalli%2C%20Tamil%20Nadu!3m2!1d10.7904833!2d78.7046725!4m5!1s0x3b0766637f0a0387%3A0x9ffae9373758c13c!2sKodaikanal%2C%20Tamil%20Nadu!3m2!1d10.2391086!2d77.4977456!5e0!3m2!1sen!2sin!4v1739941545619!5m2!1sen!2sin" 
+                width="400" height="290px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+            <br>
+
+            <div class="map-box">
+                <!--coimbatore-kerala-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1004078.8273760455!2d75.96239926130761!3d10.564854820959903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!3m2!1d11.0168445!2d76.9558321!4m5!1s0x3b0812ffd49cf55b%3A0x64bd90fbed387c99!2sKerala!3m2!1d10.1631526!2d76.64127119999999!5e0!3m2!1sen!2sin!4v1745818182562!5m2!1sen!2sin" 
+                width="400" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <br>
+
+            <div class="map-box">
+                <!--Chennai to Tirupati-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d582727.8199642935!2d79.45284032525457!3d13.370626002001053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!3m2!1d13.0843007!2d80.2704622!4m5!1s0x3a4d4b0f88620427%3A0xcf4152d1daca0cac!2sTirupati%2C%20Andhra%20Pradesh!3m2!1d13.6287557!2d79.4191795!5e0!3m2!1sen!2sin!4v1745818546695!5m2!1sen!2sin" 
+                width="400" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <br>
+        
+        <!--2-->
+            <div class="map-box">
+                <!--Chennai - Madurai-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d4003613.724872194!2d76.4438199008982!3d11.49585831378465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2schennai!3m2!1d13.0843007!2d80.2704622!4m5!1s0x3b00c582b1189633%3A0xdc955b7264f63933!2smadurai!3m2!1d9.9252007!2d78.1197754!5e0!3m2!1sen!2sin!4v1739940521882!5m2!1sen!2sin" 
+                width="400" height="290" style="border:0; gap: 10%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            </div>
+            <br>
+         <!--3-->
+            <div class="map-box">
+                <!--Puducherry - Yercaud-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1118734.3654717284!2d78.35661698705484!3d11.867586069790448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x3a5361ab8e49cfcf%3A0xcc6bd326d2f0b04e!2sPuducherry!3m2!1d11.9415915!2d79.8083133!4m5!1s0x3babf42b4747d5eb%3A0x1d3ccd9945d5e7ee!2sYercaud%2C%20Tamil%20Nadu%20636601!3m2!1d11.774792399999999!2d78.2097052!5e0!3m2!1sen!2sin!4v1739941459914!5m2!1sen!2sin" 
+                width="400" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+
+          <!--4-->
+            <div class="map-box">
+                <!--Theni- Kanniyakumari-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2016382.8519539568!2d76.45236130642657!3d9.222122957372893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x3b071353e94a7877%3A0x962bf8fd53981722!2sTheni%2C%20Tamil%20Nadu!3m2!1d10.007932199999999!2d77.4735441!4m5!1s0x3b04ed3d2a087861%3A0x1e790e896aeffaa0!2sKanniyakumari%2C%20Tamil%20Nadu!3m2!1d8.0843512!2d77.5495019!5e0!3m2!1sen!2sin!4v1739941815401!5m2!1sen!2sin" 
+                width="400" height="290" style="border:0; margin-top:0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <br>
+           <!--5-->
+            <div class="map-box">
+                <!-- Erode-Thanjavur-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1002423.5118494985!2d77.76869318741522!3d11.059843200070924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x3ba96f46762f4671%3A0xd97da6e3d9c7f75e!2sErode%2C%20Tamil%20Nadu!3m2!1d11.3410364!2d77.7171642!4m5!1s0x3baab89cea453039%3A0xe113da9b1f632be6!2sThanjavur%2C%20Tamil%20Nadu!3m2!1d10.787719!2d79.1384288!5e0!3m2!1sen!2sin!4v1739941953572!5m2!1sen!2sin" 
+                width="400" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <br>
+
+                <!--6-->
+                <div class="map-box">
+                    <!--Namakkal-Ooty-->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2000737.309425543!2d75.8589076010719!3d11.645420974501276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x3babce5e3f22014f%3A0xa0ab89ef32c34a77!2sNamakkal%2C%20Tamil%20Nadu!3m2!1d11.2193848!2d78.16784179999999!4m5!1s0x3ba8bd84b5f3d78d%3A0x179bdb14c93e3f42!2sOoty%2C%20Tamil%20Nadu!3m2!1d11.4102038!2d76.6950324!5e0!3m2!1sen!2sin!4v1739942542844!5m2!1sen!2sin" 
+                    width="400" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+
+                <!--7-->
+                <div class="map-box">
+                    <!--Dindugal -Coonoor -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d501310.6586388898!2d76.740514205347!3d11.001851243311435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x3ba839d117dea505%3A0xb3fd96d9c8642659!2sPollachi%2C%20Tamil%20Nadu%20642001!3m2!1d10.6608925!2d77.00475899999999!4m5!1s0x3ba894efa2fd0d5b%3A0x192d8d872b04dbbb!2sCoonoor%2C%20Tamil%20Nadu!3m2!1d11.3438958!2d76.7945213!5e0!3m2!1sen!2sin!4v1739942876885!5m2!1sen!2sin" 
+                    width="400" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <br>
+
+                  <!--8-->
+                <div class="map-box">
+                    <!--Velankanni-chennai-->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1999014.3922911852!2d78.63237136093187!3d11.882443717685119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x3a556ed46f2b695d%3A0xb2fb9d52ccf6410e!2sVelankanni%2C%20Tamil%20Nadu!3m2!1d10.681373599999999!2d79.85037439999999!4m5!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!3m2!1d13.0843007!2d80.2704622!5e0!3m2!1sen!2sin!4v1739943385605!5m2!1sen!2sin" 
+                    width="400" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </div>
+    </div>
+
+    <script>
+
+        /*1*/
+        document.getElementById("reserveSeat1").addEventListener("click", function() {
+    let name = document.getElementById("name").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let date = document.getElementById("date").value;
+
+    if (from && to && date) {
+        localStorage.setItem("name",name);
+        localStorage.setItem("from", from);
+        localStorage.setItem("to", to);
+        localStorage.setItem("date", date);
+        localStorage.setItem("time", "11:30 PM - 04:30 AM");
+        localStorage.setItem("price", "₹2000 per seat");
+        localStorage.setItem("seats", "3");
+        localStorage.setItem("bus", "Jihan Luxury Travels");
+
+        window.location.href = "bus ticket.html";
+    } else {
+        alert("Please fill all fields before proceeding.");
+    }
+});
+
+/*2*/
+    document.getElementById("reserveSeat2").addEventListener("click", function() {
+    let name = document.getElementById("name").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let date = document.getElementById("date").value;
+
+    if (from && to && date) {
+        localStorage.setItem("name",name);
+        localStorage.setItem("from", from);
+        localStorage.setItem("to", to);
+        localStorage.setItem("date", date);
+        localStorage.setItem("time", "04:30 AM - 08:30 AM");
+        localStorage.setItem("price", "₹1600 per seat");
+        localStorage.setItem("seats", "5");
+        localStorage.setItem("bus", "Kodaikanal Bus");
+
+        window.location.href = "bus ticket.html";
+    } else {
+        alert("Please fill all fields before proceeding.");
+    }
+});
+
+/*3*/
+document.getElementById("reserveSeat3").addEventListener("click", function() {
+    let name = document.getElementById("name").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let date = document.getElementById("date").value;
+
+    if (from && to && date) {
+        localStorage.setItem("name",name);
+        localStorage.setItem("from", from);
+        localStorage.setItem("to", to);
+        localStorage.setItem("date", date);
+        localStorage.setItem("time", "05:00 AM - 09:00 AM");
+        localStorage.setItem("price", "₹2500 per seat");
+        localStorage.setItem("seats", "7");
+        localStorage.setItem("bus", "KSRTC(Kerala)");
+
+        window.location.href = "bus ticket.html";
+    } else {
+        alert("Please fill all fields before proceeding.");
+    }
+});
+/*4*/
+document.getElementById("reserveSeat4").addEventListener("click", function() {
+    let name = document.getElementById("name").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let date = document.getElementById("date").value;
+
+    if (from && to && date) {
+        localStorage.setItem("name",name);
+        localStorage.setItem("from", from);
+        localStorage.setItem("to", to);
+        localStorage.setItem("date", date);
+        localStorage.setItem("time", "11:00 PM - 2:00 AM");
+        localStorage.setItem("price", "₹1600 per seat");
+        localStorage.setItem("seats", "7");
+        localStorage.setItem("bus", "SAPTAGIRI EXPRESS Bus");
+
+        window.location.href = "bus ticket.html";
+    } else {
+        alert("Please fill all fields before proceeding.");
+    }
+});
+/*5*/
+document.getElementById("reserveSeat5").addEventListener("click",function(){
+    let name = document.getElementById("name").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let date = document.getElementById("date").value;
+
+    if (from && to && date) {
+        localStorage.setItem("name",name);
+        localStorage.setItem("from", from);
+        localStorage.setItem("to", to);
+        localStorage.setItem("date", date);
+        localStorage.setItem("time", "10:00 AM - 05:00 AM");
+        localStorage.setItem("price", "₹1400 per seat");
+        localStorage.setItem("seats", "3");
+        localStorage.setItem("bus", "KPN Travels");
+
+} else{
+    alert("Please fill all fields before proceeding.");
+}
+});
+
+/*places3*/
+document.getElementById("reserveSeat6").addEventListener("click",function(){
+    let name = document.getElementById("name").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let date = document.getElementById("date").value;
+
+    if (from && to && date) {
+        localStorage.setItem("name",name);
+        localStorage.setItem("from", from);
+        localStorage.setItem("to", to);
+        localStorage.setItem("date", date);
+        localStorage.setItem("time", "04:00 AM - 08:15 AM");
+        localStorage.setItem("price", "₹1200 per seat");
+        localStorage.setItem("seats", "8");
+        localStorage.setItem("bus", "SRM Travels");
+
+} else{
+    alert("Please fill all fields before proceeding.");
+}
+});
+
+/*places4*/
+document.getElementById("reserveSeat7").addEventListener("click",function(){
+    let name = document.getElementById("name").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let date = document.getElementById("date").value;
+
+    if (from && to && date) {
+        localStorage.setItem("name",name);
+        localStorage.setItem("from", from);
+        localStorage.setItem("to", to);
+        localStorage.setItem("date", date);
+        localStorage.setItem("time", "11:00 AM - 06:00 AM");
+        localStorage.setItem("price", "₹1500 per seat");
+        localStorage.setItem("seats", "4");
+        localStorage.setItem("bus", "Orange Travels");
+
+} else{
+    alert("Please fill all fields before proceeding.");
+}
+});
+
+/*places5*/
+document.getElementById("reserveSeat8").addEventListener("click",function(){
+    let name = document.getElementById("name").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let date = document.getElementById("date").value;
+
+    if (from && to && date) {
+        localStorage.setItem("name",name);
+        localStorage.setItem("from", from);
+        localStorage.setItem("to", to);
+        localStorage.setItem("date", date);
+        localStorage.setItem("time", "04:00 PM - 08:30 AM");
+        localStorage.setItem("price", "₹1300 per seat");
+        localStorage.setItem("seats", "6");
+        localStorage.setItem("bus", "SRS Travels");
+
+} else{
+    alert("Please fill all fields before proceeding.");
+}
+});
+
+/*places6*/
+document.getElementById("reserveSeat9").addEventListener("click",function(){
+    let name = document.getElementById("name").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let date = document.getElementById("date").value;
+
+    if (from && to && date) {
+        localStorage.setItem("name",name);
+        localStorage.setItem("from", from);
+        localStorage.setItem("to", to);
+        localStorage.setItem("date", date);
+        localStorage.setItem("time", "06:00 PM - 06:30 AM");
+        localStorage.setItem("price", "₹1300 per seat");
+        localStorage.setItem("seats", "6");
+        localStorage.setItem("bus", "National Travels");
+
+} else{
+    alert("Please fill all fields before proceeding.");
+}
+});
+
+document.getElementById("reserveSeat10").addEventListener("click",function(){
+    let name = document.getElementById("name").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let date = document.getElementById("date").value;
+
+    if (from && to && date) {
+        localStorage.setItem("name",name);
+        localStorage.setItem("from", from);
+        localStorage.setItem("to", to);
+        localStorage.setItem("date", date);
+        localStorage.setItem("time", "06:45 AM - 09:30 AM ");
+        localStorage.setItem("price", "₹1300 per seat");
+        localStorage.setItem("seats", "6");
+        localStorage.setItem("bus", "Jayam Travels");
+
+} else{
+    alert("Please fill all fields before proceeding.");
+}
+});
+
+
+/*places8*/
+document.getElementById("reserveSeat11").addEventListener("click",function(){
+    let name = document.getElementById("name").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let date = document.getElementById("date").value;
+
+    if (from && to && date) {
+        localStorage.setItem("name",name);
+        localStorage.setItem("from", from);
+        localStorage.setItem("to", to);
+        localStorage.setItem("date", date);
+        localStorage.setItem("time", "11:00 PM - 06:15 AM");
+        localStorage.setItem("price", "₹1300 per seat");
+        localStorage.setItem("seats", "6");
+        localStorage.setItem("bus", "Universal Travels");
+
+} else{
+    alert("Please fill all fields before proceeding.");
+}
+});
+
+ </script>
+
+</body>
+</html>

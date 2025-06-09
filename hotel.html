@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crowny Hotel</title>
+  <link rel="stylesheet" href="hotel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <header>
+    <div class="content flex_space">
+      <div class="logo">
+        <img src="" alt="">
+      </div>
+      <div class="navlinks">
+        <ul id="menulist">
+          <li><a href="#home">Home</a> </li>
+          <li><a href="#about">About</a> </li>
+          <li><a href="#rooms">Rooms</a> </li>
+          <li><a href="#pages">Gallery</a> </li>
+          <li><a href="chatbot.html">Chatbot</a> </li>
+          <li><a href="food menu.html">Food Menu</a> </li>
+          <li> <i class="fa fa-search"></i> </li>
+          <li> <button class="primary-btn">BOOK NOW</button> </li>
+        </ul>
+        <span class="fa fa-bars" onclick="menutoggle()"></span>
+      </div>
+    </div>
+  </header>
+
+
+  <script>
+    var menulist = document.getElementById('menulist');
+    menulist.style.maxHeight = "0px";
+
+    function menutoggle() {
+      if (menulist.style.maxHeight == "0px") {
+        menulist.style.maxHeight = "100vh";
+      } else {
+        menulist.style.maxHeight = "0px";
+      }
+    }
+  </script>
+
+
+  <section class="home">
+    <div class="content">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="C:\Users\Admin\Downloads\home1.jpg" alt="">
+          <div class="text">
+            <h1>Spend Your Holiday</h1>
+            <p style="color:white;">Welcome to our hotel, where luxury meets comfort—check the latest weather updates 
+                <br>and get instant assistance with our AI chatbot
+            </p>
+            <div class="flex">
+              <button class="primary-btn">READ MORE</button>
+              <button class="secondary-btn">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://media.istockphoto.com/id/2110310187/photo/luxury-tropical-pool-villa-at-dusk.webp?a=1&b=1&s=612x612&w=0&k=20&c=3wDvy4YueLfVHI9Kycl7J-nYKJsxiJL1rpBQ-ZS0hTI=" alt="">
+          <div class="text">
+            <h1>Easy and Secure Booking</h1>
+            <p>Book your stay effortlessly with our secure payment options, ensuring a smooth and hassle-free experience."
+            </p>
+            <div class="flex">
+              <button class="primary-btn">READ MORE</button>
+              <button class="secondary-btn">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://t4.ftcdn.net/jpg/07/74/43/79/240_F_774437913_xTcLCVMkozuJ3vRGle7mZvWEeswadq1c.jpg">
+          <div class="text">
+            <h1>Secure Payment Guaranteed</h1>
+            <p>Enjoy a worry-free booking experience with our encrypted and secure payment system, ensuring your transactions are safe."
+            </p>
+            <div class="flex">
+              <button class="primary-btn">READ MORE</button>
+              <button class="secondary-btn">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
+
+
+
+  <section class="book">
+    <div class="container flex_space">
+      <div class="text">
+        <h1> <span>Book </span> Your Rooms </h1>
+      </div>
+      <div class="form">
+        <form class="grid">
+          <input type="date" placeholder="Araival Date">
+          <input type="date" placeholder="Departure Date">
+          <input type="number" placeholder="Adults">
+          <input type="number" placeholder="Childern">
+          <input type="submit" value="CHECK AVAILABILITY">
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
+ <section class="about top">
+    <div class="container flex">
+      <div class="left">
+        <div class="heading">
+          <h1>WELCOME</h1>
+          <h2>Crowny Hotel</h2>
+        </div>
+        <p>Book your stay with ease using our seamless online reservation system and secure payment options. Need help? Our AI chatbot is available 24/7 to assist you instantly!</p>
+        <button class="primary-btn">ABOUT US</button>
+      </div>
+      <div class="right">
+        <img src="C:\Users\Admin\Downloads\hotel2.jpg" style="width: 400px; height: 350px;padding-left: 40px;" alt="">
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="counter top" style="background-color: rgb(66, 65, 65); margin-top:5px;padding-left: 5px;padding-right: 5px;">
+    <div class="container grid">
+      <div class="box">
+        <h1>2500</h1>
+        <hr>
+        <span>Customer</span>
+      </div>
+      <div class="box">
+        <h1>500+</h1>
+        <hr>
+        <span>Hotel</span>
+      </div>
+      <div class="box">
+        <h1>300</h1>
+        <hr>
+        <span>Check In</span>
+      </div>
+      <div class="box">
+        <h1>150+</h1>
+        <hr>
+        <span>Check Out</span>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="rooms">
+    <div class="container top">
+      <div class="heading">
+        <h1>EXPOLRE</h1>
+        <h2>Our Rooms</h2>
+        <h3 style="font-size: 20px; font-weight: bold; color:red;">Plan Your Stay and Best Hotel Rooms for Your Comfort</h3>
+      </div>
+
+      <div class="content mtop">
+        <div class="owl-carousel owl-carousel1 owl-theme">
+          <div class="items">
+            <div class="image">
+              <img src="https://t3.ftcdn.net/jpg/09/62/13/58/240_F_962135891_vEmNgbvzeySwqf87hznsuVdUkPuHWrLl.jpg" width="250px" height="220px" alt="">
+            </div>
+            <div class="text">
+              <h1 style="color: rgb(14, 14, 224);">Hotel Lakeview Ooty</h1>
+              <br>
+              <h2>Luxury Rooms</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+             <!--<p>Ooty</p>-->
+              </p>
+              <div class="button flex">
+                <a href="QR Code.html"><button class="primary-btn" style="width: 150px; height:50px; padding-top: 5px;">BOOK NOW</button></a>
+                <h3 style="padding-top: 20px;">₹5000 <span> <br></span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww" alt="">
+            </div>
+            <div class="text">
+              <h1 style="color: rgb(14, 14, 224);">Taj Mahal Palace(mumbai)</h1>
+              <br>
+              <h2>Luxury Hotels</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>
+              </p>
+              <div class="button flex">
+                <a href="QR Code.html"><button class="primary-btn" style="width: 150px; height:50px; padding-top: 5px;">BOOK NOW</button></a>
+                <h3 style="padding-top: 20px;">₹3500 <span> <br> </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="https://media.istockphoto.com/id/2110310187/photo/luxury-tropical-pool-villa-at-dusk.webp?a=1&b=1&s=612x612&w=0&k=20&c=3wDvy4YueLfVHI9Kycl7J-nYKJsxiJL1rpBQ-ZS0hTI=" width="250px" height="220px" alt="">
+            </div>
+            <div class="text">
+              <h1>The LOberoi Udaivilas(Udaipur)</h1>
+              <br>
+              <h2>Luxury Rooms</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>
+              </p>
+              <div class="button flex">
+               <a href="QR Code.html"><button class="primary-btn" style="width: 150px; height:50px; padding-top: 5px;">BOOK NOW</button></a>
+                <h3>₹2500 <span> <br> </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="https://img.freepik.com/free-photo/swimming-pool-beach-luxury-hotel-type-entertainment-complex-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer-turkey_146671-18726.jpg?ga=GA1.1.1001571066.1729434202&semt=ais_hybrid" width="250px" height="220px" alt="">
+            </div>
+            <div class="text">
+              <h1>FabHotels</h1>
+              <br>
+              <h2>Luxury Hotel</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>
+              </p>
+              <div class="button flex">
+               <a href="QR Code.html"><button class="primary-btn" style="width: 150px; height:50px; padding-top: 5px;">BOOK NOW</button></a>
+                <h3>₹4500 <span> <br>  </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="https://img.freepik.com/free-photo/hammocks-with-palm-trees_1203-201.jpg?ga=GA1.1.1001571066.1729434202&semt=ais_hybrid" width="250px" height="220px" alt="">
+            </div>
+            <div class="text">
+              <h1>Samoda Palace(Jaipur)</h1>
+              <br>
+              <h2>Heritage and palace hotels</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              
+              <div class="button flex">
+                <a href="QR Code.html"><button class="primary-btn" style="width: 150px; height:50px; padding-top: 5px;">BOOK NOW</button></a>
+                <h3>₹1000 <span> <br>  </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="https://media.istockphoto.com/id/472899538/photo/downtown-cleveland-hotel-entrance-and-waiting-taxi-cab.jpg?s=612x612&w=0&k=20&c=rz-WSe_6gKfkID6EL9yxCdN_UIMkXUBsr67884j-X9o=" alt="">
+            </div>
+            <div class="text">
+              <h1>Sterling Kodai Lake(Kodaikanal)</h1>
+              <h2>Luxury Rooms</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <div class="button flex">
+                <a href="QR Code.html"><button class="primary-btn" style="width: 150px; height:50px; padding-top: 5px;">BOOK NOW</button></a>
+                <h3>₹5500 <span> <br> </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="https://c4.wallpaperflare.com/wallpaper/624/380/1000/life-resort-hotel-resort-hotel-wallpaper-preview.jpg" height="220px" alt="">
+            </div>
+            <div class="text">
+              <h1>Gokulam-Park Coimbatore</h1>
+              <br>
+              <h2>Budget-friendly Rooms</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <div class="button flex">
+                <a href="QR Code.html"><button class="primary-btn" style="width: 150px; height:50px; padding-top: 5px;">BOOK NOW</button></a>
+                <h3> <span> <br> </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="https://img.freepik.com/free-photo/swimming-pool-beach-luxury-hotel-type-entertainment-complex-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer-turkey_146671-18726.jpg?t=st=1742307356~exp=1742310956~hmac=16c2d1bcbc0be5692a6c8296da7390b0b90caee6d7d8fe76f63666d540cd439d&w=1380" alt="">
+            </div>
+            <div class="text">
+              <h1>Fortune Pandiyan Hotel Madurai</h1>
+              <br>
+              <h2>Budget-friendly Hotel</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>
+              </p>
+              <div class="button flex">
+                <a href="QR Code.html"><button class="primary-btn" style="width: 150px; height:50px; padding-top: 5px;">BOOK NOW</button></a>
+                <h3>₹1200 <span> <br> </span> </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: true,
+      margin: 40,
+      nav: true,
+      dots: false,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2,
+          margin: 10,
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+  </script><section class="gallery">
+    <div class="container top">
+      <div class="heading">
+        <h1>PHOTOS</h1>
+        <h2>Our Gallery</h2>
+        <h3></h3>
+      </div>
+    </div>
+
+    <div class="content mtop">
+      <div class="owl-carousel owl-carousel1 owl-theme">
+        <div class="items">
+          <div class="img">
+            <img src="https://c4.wallpaperflare.com/wallpaper/686/52/945/luxurious-hotel-room-wallpaper-preview.jpg" width="150px" height="170px">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Rooms</h3>
+          </div>
+        </div>
+     <div class="items">
+          <div class="img">
+            <img src="https://t3.ftcdn.net/jpg/07/12/55/10/240_F_712551074_9ibRJjEvHDbFbvAcYsIMxf5qk6961O7o.jpg" width="150px" height="170px">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Rooms</h3>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="img">
+            <img src="https://cdn.pixabay.com/photo/2016/02/10/13/39/hotel-1191726_1280.jpg"   width="150px" height="170px">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Rooms</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406_1280.jpg" width="150px" height="170px">
+          </div>
+        
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Rooms</h3>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="img">
+            <img src="https://as2.ftcdn.net/v2/jpg/06/34/34/51/1000_F_634345105_YW3bigPbWgXVdUtlWkeupNdUral7bSo2.jpg" width="150px" height="170px">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Rooms</h3>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="img">
+            <img src="https://t4.ftcdn.net/jpg/08/26/41/69/240_F_826416954_oMtTBxldneXQQTT6FwaCGUOG1roEiGJU.jpg" >
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Rooms</h3>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="img">
+           <img src="https://media.istockphoto.com/id/114306520/photo/modern-hotel-room-with-a-grey-bed.jpg?s=612x612&w=0&k=20&c=ro7lDzerjGqndlQ_hJSFGKSPHlPK2v19-_pVti7_DOI="  alt="image">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Rooms</h3>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="img">
+            <img src="https://glamorous-design.org/wp-content/uploads/2024/09/inside-floating-palace_865967-56780.jpg" width="150px" height="170px" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Rooms</h3>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="img">
+            <img src="https://media.istockphoto.com/id/1050564510/photo/3d-rendering-beautiful-luxury-bedroom-suite-in-hotel-with-tv.jpg?s=612x612&w=0&k=20&c=ZYEso7dgPl889aYddhY2Fj3GOyuwqliHkbbT8pjl_iM=" width="150px" height="170px" alt="" >
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Rooms</h3>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="img">
+            <img src="https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?cs=srgb&dl=pexels-julieaagaard-2467285.jpg&fm=jpg">
+      </div>
+      <div class="overlay">
+        <span class="fa fa-plus"></span>
+        <h3></h3>
+      </div>
+        </div>
+
+        <div class="items">
+          <div class="img">
+            <img src="https://c4.wallpaperflare.com/wallpaper/74/457/102/life-room-interior-home-wallpaper-preview.jpg">
+      </div>
+      <div class="overlay">
+        <span class="fa fa-plus"></span>
+        <h3></h3>
+      </div>
+        </div>
+
+
+        
+        </div>
+      </div>
+  </section>
+
+
+  <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 4,
+        },
+        1000: {
+          items: 6
+        }
+      }
+    })
+  </script>
+
+
+  <section class="services top">
+    <div class="container">
+      <div class="heading">
+        <h1>SERVICES</h1>
+        <h2>Our Services</h2>
+        <p style="font-size: 20px; font-weight:500px;color: blue;">Our Services, Your Satisfaction</p>
+      </div>
+
+
+      <div class="content flex_space">
+        <div class="left grid2">
+          <div class="box">
+            <div class="text">
+              <img src="https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D">
+              <!--<i class="fa-solid fa-champagne-glasses"></i>-->
+              <h3>Delicious Food</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <img src="https://i.pinimg.com/736x/83/a9/81/83a981f4470517a4fabc9c384bdd5877.jpg">
+              <!--<i class="fa-solid fa-person-biking"></i>-->
+              <h3>Budget-Friendly Services</h3>
+              
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <img src="https://picture.lk/files/preview/1280x717/11722456235ifh3wr99crvorcyr4zy2pfuel5wfrbgpmkmzl3efydhogqaudol9pxgn2zropi7i4csnuc5wn4vilyzcrp1eh2ubf88z6vzfr8zy.jpg">
+             <!--<i class="fa-solid fa-utensils"></i>-->
+              <h3>Travel and Transport</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <img src="https://i0.wp.com/blogrevamp.cashfree.com/wp-content/uploads/2023/07/Payment-Success-Rate.png?fit=1200%2C800&ssl=1">
+              <!--<i class="fa-solid fa-spa"></i>-->
+              <h3>Secure Payment</h3>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <img src="https://cdn.pixabay.com/photo/2015/10/30/10/45/service-1013724_1280.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="Customer top" style="background-image: url('https://img.freepik.com/free-vector/gradient-black-backgrounds-with-golden-frames_23-2149147606.jpg?t=st=1742397317~exp=1742400917~hmac=194791409fa594e082dce085b85646391d94c60aea36ede66e75931119b3e573&w=1380');">
+
+    <div class="container">
+      <div class="owl-carousel owl-carousel2 owl-theme">
+        <div class="item">
+          <i class="fa-solid fa-quote-right"></i>
+          <p>Book with confidence: Our website offers secure payment options to protect your personal and financial information. Get instant answers: Our AI-powered chatbot is available 24/7 to assist with your queries. Plan your stay: Check the latest weather forecast for our location to make the most of your trip.</p>
+          <h3>Sneha</h3>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-quote-right"></i>
+          <p>I had a seamless booking experience on your website and enjoyed my stay at your hotel! The website's user-friendly interface and clear information made planning my trip a breeze."</p>
+          <h3>Dhivya</h3>
+          <!--<label>Julia Robertson</label>-->
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-quote-right"></i>
+          <p>Our hotel offers budget-friendly rooms, convenient transport services, delicious food options, and secure payment gateways for a stress-free stay.</p>
+          <h3>Karthick</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    $('.owl-carousel2').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1,
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+  
+<style>
+.contact {
+  background-color: #1a1a2e;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  width: 1000px;
+  height: 600px;
+  margin-left:180px;
+  margin-top: 40px;
+}
+
+/*h2 {
+  color: #00ff99;
+}*/
+
+p {
+  font-size: 14px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-contact {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.password-contact {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: gray;
+}
+
+button {
+  background-color: #00ff99;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #00cc77;
+}
+
+a {
+  color: #00ff99;
+  text-decoration: none;
+}
+
+  </style>
+</head>
+<body>
+  <div class="contact">
+      <h1 style="color: #00cc77;">Get In Touch</h1>
+      <br>
+      <h3>Have question? Reach out to us!</h3>
+      <br>
+      <form id="registerForm" style="width: 80%; padding-left:20%;">
+          <div class="name-container">
+              <input type="text" placeholder="Firstname" id="firstname">
+              <input type="email" placeholder="Email" id="lastname">
+          </div>
+          <input type="text" placeholder="phone number" id="phonenumber">
+          <div class="password-container">
+              <input type="text" placeholder="District" id="District">
+              
+          </div>
+          <div class="password-container">
+              <input type="text" placeholder="message" id="message"  style="height: 200px;">
+          </div>
+          <a href="food menu.html"><button type="submit" id="submitBtn" style="color: #00cc77; width:100px; height: 50px; color: white;">Submit</button></a>
+          
+      </form>
+  </div>
+
+  <script>
+    const submitBtn=document.getElementById('submitBtn');
+    submitBtn.addEventListener('click',()=>{
+      window.location.href='food menu.html';
+    });
+  </script>
+
+  <!--<script>
+      function togglePassword(fieldId) {
+  let field = document.getElementById(fieldId);
+  if (field.type === "password") {
+      field.type = "text";
+  } else {
+      field.type = "password";
+  }
+}
+
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  let password = document.getElementById("password").value;
+  let confirmPassword = document.getElementById("confirmPassword").value;
+
+  if (password !== confirmPassword) {
+      alert("Passwords do")
+  }
+  </script>-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+  
+
+
+  <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

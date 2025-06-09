@@ -1,0 +1,222 @@
+<!--Font Awesome CDN-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://media.istockphoto.com/id/1244089840/vector/online-banking-app-landing-page-smart-wallet-concept-with-credit-debit-card-payment.jpg?s=612x612&w=0&k=20&c=rcSw5KM603UltXtlEIhBosOsNQGpByEpYFVd4PUzNkA=');
+}
+
+.container{
+    width: 400px;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+                0 5px 12px -2px rgba(0, 0, 0, 0.1),
+                0 18px 36px -6px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
+
+}
+
+.container .title{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container form input{
+    display: none;
+}
+
+.container form .category{
+    margin-top: 10px;
+    padding-top: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    
+}
+
+.category label{
+    /* width: 100%; */
+    /* height: 65px; */
+    height: 145px;
+    padding: 20px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid white;
+}
+
+/* label:nth-child(2), label:nth-child(3){
+    margin: 15px 0;
+} */
+
+
+#visa:checked ~ .category .visaMethod,
+#mastercard:checked ~ .category .mastercardMethod,
+#paypal:checked ~ .category .paypalMethod,
+#AMEX:checked ~ .category .amexMethod{
+    box-shadow: 0px 0px 0px 1px #6064b6;
+}
+
+
+#visa:checked ~ .category .visaMethod .check,
+#mastercard:checked ~ .category .mastercardMethod .check,
+#paypal:checked ~ .category .paypalMethod .check,
+#AMEX:checked ~ .category .amexMethod .check{
+    display: block;
+}
+
+
+label .imgName{
+    display: flex;
+    /* justify-content: space-between;
+     */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.imgName span{
+    /* margin-left: 20px; */
+    font-family: Arial, Helvetica, sans-serif;
+
+    position: absolute;
+    top: 72%;
+    transform: translateY(-72%);
+}
+
+.imgName .imgContainer{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 35%;
+    transform: translateY(-35%);
+}
+
+img{
+    width: 50px;
+    height: auto;
+}
+
+.visa img{
+    width: 80px;
+    /* margin-left: 5px; */
+}
+
+.mastercard img{
+    width: 65px;
+}
+
+.paypal img{
+    width: 80px;
+}
+
+.AMEX img{
+    width: 50px;
+}
+
+.check{
+    display: none;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+}
+
+.check i{
+    font-size: 18px;
+}
+
+
+</style>
+<body>
+    
+</body>
+</html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="container">
+    <div class="title">
+        <h4>Select a <span style="color: #6064b6">Payment</span> method</h4>
+    </div>
+
+    <form action="#">
+        <input type="radio" name="payment" id="visa">
+        <input type="radio" name="payment" id="mastercard">
+        <input type="radio" name="payment" id="paypal">
+        <input type="radio" name="payment" id="AMEX">
+
+
+        <div class="category">
+            <label for="visa" class="visaMethod">
+                <div class="imgName">
+                    <div class="imgContainer visa">
+                        <!--<img src="https://i.ibb.co/vjQCN4y/Visa-Card.png" alt="">!-->
+                        <img src="https://img.icons8.com/?size=96&id=am4ltuIYDpQ5&format=png">
+                    </div>
+                   <a href="Gpay.html"><span class="name" style="padding-top:35px; color: white;">GPay</span></a>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+
+            <label for="mastercard" class="mastercardMethod">
+                <div class="imgName">
+                    <div class="imgContainer mastercard">
+                       <!-- <img src="https://i.ibb.co/vdbBkgT/mastercard.jpg" alt="">-->
+                        <img src="https://cdn.iconscout.com/icon/free/png-512/free-phonepe-logo-icon-download-in-svg-png-gif-file-formats--payment-app-application-indian-companies-pack-logos-icons-2249157.png?f=webp&w=512" style="width: 140px;">
+
+                    </div>
+                    <a href="Gpay.html"><span class="name" style="padding-top: 20px; color: white;">Phonepe</span></a>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+
+            <label for="paypal" class="paypalMethod">
+                <div class="imgName">
+                    <div class="imgContainer paypal">
+                        <img src="https://i.ibb.co/vjQCN4y/Visa-Card.png" style="width: 100px; height: 50px;" alt="">
+                    </div>
+                    <a href="credit card.html"><span class="name" style="color: white; padding-top: 20px;">VISA</span></a>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+
+            <label for="AMEX" class="amexMethod">
+                <div class="imgName">
+                    <div class="imgContainer AMEX">
+                        <img src="https://thepatriot.in/wp-content/uploads/2024/02/Paytm.jpg" alt="" style="width: 100px; height: 90px;">
+                    </div>
+                    <span class="name" style="padding-top:90px; color: white;">Paytm</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+        </div>
+    </form>
+</div>
+</body>
+</html>

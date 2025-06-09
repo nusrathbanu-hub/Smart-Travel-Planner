@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common form.css">
+
+    
+</head>
+<body>
+    
+    <!--<div class="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="location.html">Location</a>
+        <a href="Login.html">Register</a>
+        <button class="btnlogin-popup">Login</button>
+
+    </div>
+-->
+<div class="landing">
+    <header>
+        <h2 class="logo"></h2>
+        
+        
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="choose vehicle.html">Reservation</a>
+            <a href="Bus ticket.html">bus ticket</a>
+            <a href="train ticket.html">Train ticket</a>
+            <a href="Login.html">Weather</a>
+            <a href="chatbot.html">chatbot</a>
+            <a href="select payment.html"><button class="btnlogin-popup" style="width: 140px; height: 70px;">Select Payment</button></a>
+
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <h1>Travel Booking Form</h1>
+   <h3 style="color:white;font-size:25px; text-align: center;">Personal Details</h3>
+
+    <div class="row register-form">
+        <div class="col-md-12">
+            <form  method="post" autocomplete="off" name="google-sheet">
+
+              <div class="form-group">
+                <label for="name">Full Name</label>
+            <input type="text" id="Name" name="Name" required>
+            </div>
+            <div class="form-group">
+            <label for="Date of Birth">Date of Birth:</label>
+            <input type="date" id="Date of Birth" name="Date of Birth" required>
+            </div>
+
+       <div class="form-group">
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" required>
+        </div>
+
+        <div class="form-group">
+        <label for="Mobile No">Mobile No:</label>
+            <input type="tel" id="Mobile No" name="Mobile No" placeholder="Enter mobile number">
+            </div>
+           
+              <div class="form-group">
+              <label for="Gender">Gender</label>
+               <select id="Gender" name="Gender" placeholder="Select gender" required>
+                <option value="Select gender">Select gender</option>
+               <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                 </select>   
+            </div>
+
+            <div class="form-group">
+                <label for="District">District:</label>
+                <select id="District" name="District" placeholder="District" required>
+                    <option value="Select gender">Select District</option>
+                               <option value="Chennai">Chennai</option>
+                                <option value="Coimbatore">Coimbatore</option>
+                                <option>Tirupur</option>
+                                <option>Tiruchy</option>
+                                <option value="Erode">Erode</option>
+                                <option value="Namakkal">Namakkal</option>
+                                <option value="Dharmapuri">Dharmapuri</option>
+                                <option value="Karur">Karur</option>
+                                <option value="Cuddalore">Cuddalore</option>
+                                <option value="Krishnagiri">Krishnagiri</option>
+                                <option value="Salem">Salem</option>
+                               <option>Kallakurichi</option>
+                                <option>Kanniyakumari</option>
+                                </select>
+            
+            </div>
+            <br>
+
+            <h2 style="color: white; font-size: 25px; text-align: center;">Travel Details</h2>
+
+            <div class="form-group">
+                <label for="Preferred Destination">Preferred Destination</label>
+                <select  id="Preferred Destination" name="Preferred Destination" required>
+                    <option disabled selected>Ooty</option>
+                <option>Ooty</option>
+                <option>Kerala</option>
+                <option>Mumbai</option>
+                <option>Tirupati</option>
+                <option>Coimbatore</option>
+                <option>Kodaikanal</option>
+                <option>Goa</option>
+                <option>Darjeeling</option>
+                <option>Chennai</option>
+                <option>Madurai</option>
+                <option>KanniyaKumari</option>
+                <option>Coonoor</option>
+                <option>Thanjavur</option>
+                <option>Yercaud</option>
+             </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Travel Preferences">Travel Preferences</label>
+        <select id="Travel Preferences" name="Travel Preferences" required>
+            <option value="Adventure">Adventure</option>
+            <option value="Relaxation">Relaxation</option>
+            <option value="Sightseeing">Sightseeing</option>
+        </select>   
+        </div>
+
+        <div class="form-group">
+            <label for="Days">Select Duration</label>
+            <select id="Days" name="Days" required>
+                <option value="Number of Days">Number of Days</option>
+                 <option>1</option>
+                 <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+            </select>   
+            </div>
+
+            <div class="form-group">
+                <label for="Age Group">Age Group</label>
+                <select id="Age Group" name="Age Group">
+                    <option>Family Trips</option>
+                    <option>Solo Travel</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Number of Travelers</label>
+                 <input type="text"  id="No of Travelers" name="No of Travelers"  placeholder="Enter number of travelers ">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Hotel Booking Required?</label>
+                            <select id="Hotel Booking" name="Hotel Booking">
+                            <option>Yes</option>
+                            <option>No</option>
+                            </select>
+                        </div>
+            </div>
+    
+    <button type="submit">Confirm Appointment</button>
+        </form>
+       <div id="result"></div>
+    </div>
+    <script src=""></script>
+
+   <!--<div class="form-group">
+                    <input type="submit" style="background-color: green; color:white;" name="submit" class="btnSubmit btn-block" value="Login" />
+                </div>-->
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxpcJnMw_F2w4cQ9Rt5gkNNh4Tjuwchrt_tpzqb9QPSOMQxwhhmPR7jU-PvCP6rV2rLjQ/exec'
+       const form = document.forms['google-sheet']
+     
+       form.addEventListener('submit', e => {
+         e.preventDefault()
+         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+           .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+           .catch(error => console.error('Error!', error.message))
+       })
+     </script>
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</body>
+</html>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

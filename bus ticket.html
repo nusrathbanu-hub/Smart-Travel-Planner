@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Details</title>
+    <link rel="stylesheet" href="">
+
+    <style>
+         body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    /*background-color: #f4f4f4;*/
+    background-image: url('https://images.pexels.com/photos/1266831/pexels-photo-1266831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    height: 90%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f8f8;
+    text-align: right;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ticket Issued Successfully</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <td id="name"></td>
+            </tr>
+            <tr>
+                <th>From</th>
+                <td id="from"></td>
+            </tr>
+            <tr>
+                <th>To</th>
+                <td id="to"></td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td id="date"></td>
+            </tr>
+            <tr>
+            <th>Bus</th>
+            <td id="bus"></td>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <td id="time"></td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td id="price"></td>
+            </tr>
+            <tr>
+            <th>Booked seats</th>
+            <td id="seats"></td>
+        </tr>
+        </table>
+        <!--<p><strong>From:</strong> <span id="from"></span></p>
+        <p><strong>To:</strong> <span id="to"></span></p>
+        <p><strong>Date:</strong> <span id="date"></span></p>
+        <p><strong>Bus:</strong> <span id="bus"></span></p>
+        <p><strong>Time:</strong> <span id="time"></span></p>
+        <p><strong>Price:</strong> <span id="price"></span></p>
+        <p><strong>Booked Seats:</strong> <span id="seats"></span></p>-->
+
+        <a href="hotel.html"><button>Go Back</button></a>
+    </div>
+
+    <script>
+        document.getElementById("name").textContent = localStorage.getItem("name") || "N/A";
+        document.getElementById("from").textContent = localStorage.getItem("from") || "N/A";
+        document.getElementById("to").textContent = localStorage.getItem("to") || "N/A";
+        document.getElementById("date").textContent = localStorage.getItem("date") || "N/A";
+        document.getElementById("bus").textContent = localStorage.getItem("bus") || "N/A";
+        document.getElementById("time").textContent = localStorage.getItem("time") || "N/A";
+        document.getElementById("price").textContent = localStorage.getItem("price") || "N/A";
+        document.getElementById("seats").textContent = localStorage.getItem("seats") || "N/A";
+    </script>
+
+</body>
+</html>
