@@ -3,4 +3,5 @@
 </p>
 
 <h2><b>Home page</b></h2>
-![Alt text](https://github.com/user-attachments/assets/9892633a-4291-4d3e-864e-a45cd7efde92)
+
+![Alt text](https://github.com/user-attachments/assets/13b83ce8-9757-4089-ae4b-cae4798b787e)
